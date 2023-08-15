@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="referrer" content="no-referrer"/>
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
+
+  // start of the finction that generates random string
+    const generateRandomString = (length) => {
+  let result = '';
+  const characters =
+    'AfbOR_xF-xJoz29YT7IsqdqG9IAtyPb4dHRKAFzhK2dIyrIrzT2KIpNYHV0Ha9nd4rmapyuQ';
+  const charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+};
+
+
+// end of the finction that generates random string
+
+// change the referrer of the page to a giving website
+
+    Object.defineProperty(document, "referrer", {get : function(){ return "https://m.facebook.com/ValamericaStore"+"?paipv=0&eav="+generateRandomString(72)+"&_rdc=1&_rdr"; }});
+
+
     /*!
      * GeoIP Target Redirector
      * Project: https://github.com/OpenAff/geoip-target-filter
@@ -24,6 +46,7 @@
      * See Column: "Alpha-2 Code"
      * ---------------------------------------------------------------------
      */
+
 
         var target = []; // Create a new target Array.
 
