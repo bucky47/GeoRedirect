@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Chapters</title>
+    <style>
+        body {
+            background-color: #1F1F1F;
+            color: #FFFFFF;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #FFF;
+            margin: 20px 0;
+        }
+
+        .chapter-card {
+            background-color: #333;
+            border: none;
+            border-radius: 4px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: calc(100% - 20px); /* Full width minus margin */
+            box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        }
+
+        .chapter-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        #pdf-container {
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        #pdf-iframe {
+            border: none;
+            height: 500px;
+        }
+
+        @media (max-width: 600px) {
+            .chapter-card {
+                margin: 10px 0; /* Less margin on mobile */
+                padding: 15px; /* Smaller padding on mobile */
+            }
+            #pdf-container {
+                width: 95%; /* More width for the container on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Manga Chapters</h1>
+    <div class="chapter-card" onclick="openChapter('')">Chapter 1</div>
+    <div class="chapter-card" onclick="openChapter('chapter2.pdf')">Chapter 2</div>
+    <div class="chapter-card" onclick="openChapter('chapter3.pdf')">Chapter 3</div>
+	<div class="chapter-card" onclick="openChapter('chapter3.pdf')">Chapter 4</div>
+	<div class="chapter-card" onclick="openChapter('chapter3.pdf')">Chapter 5</div>
+	<div class="chapter-card" onclick="openChapter('chapter3.pdf')">Chapter 6</div>
+	<div class="chapter-card" onclick="openChapter('chapter3.pdf')">Chapter 7</div>
+	<div class="chapter-card" onclick="openChapter('chapter8.pdf')">Chapter 8</div>
+<div class="chapter-card" onclick="openChapter('chapter9.pdf')">Chapter 9</div>
+<div class="chapter-card" onclick="openChapter('chapter10.pdf')">Chapter 10</div>
+<div class="chapter-card" onclick="openChapter('chapter11.pdf')">Chapter 11</div>
+<div class="chapter-card" onclick="openChapter('chapter12.pdf')">Chapter 12</div>
+<div class="chapter-card" onclick="openChapter('chapter13.pdf')">Chapter 13</div>
+<div class="chapter-card" onclick="openChapter('chapter14.pdf')">Chapter 14</div>
+<div class="chapter-card" onclick="openChapter('chapter15.pdf')">Chapter 15</div>
+<div class="chapter-card" onclick="openChapter('chapter16.pdf')">Chapter 16</div>
+<div class="chapter-card" onclick="openChapter('chapter17.pdf')">Chapter 17</div>
+<div class="chapter-card" onclick="openChapter('chapter18.pdf')">Chapter 18</div>
+<div class="chapter-card" onclick="openChapter('chapter19.pdf')">Chapter 19</div>
+<div class="chapter-card" onclick="openChapter('chapter20.pdf')">Chapter 20</div>
+<div class="chapter-card" onclick="openChapter('chapter21.pdf')">Chapter 21</div>
+<div class="chapter-card" onclick="openChapter('chapter22.pdf')">Chapter 22</div>
+<div class="chapter-card" onclick="openChapter('chapter23.pdf')">Chapter 23</div>
+<div class="chapter-card" onclick="openChapter('chapter24.pdf')">Chapter 24</div>
+<div class="chapter-card" onclick="openChapter('chapter25.pdf')">Chapter 25</div>
+<div class="chapter-card" onclick="openChapter('chapter26.pdf')">Chapter 26</div>
+<div class="chapter-card" onclick="openChapter('chapter27.pdf')">Chapter 27</div>
+<div class="chapter-card" onclick="openChapter('chapter28.pdf')">Chapter 28</div>
+<div class="chapter-card" onclick="openChapter('chapter29.pdf')">Chapter 29</div>
+<div class="chapter-card" onclick="openChapter('chapter30.pdf')">Chapter 30</div>
+<div class="chapter-card" onclick="openChapter('chapter31.pdf')">Chapter 31</div>
+<div class="chapter-card" onclick="openChapter('chapter32.pdf')">Chapter 32</div>
+<div class="chapter-card" onclick="openChapter('chapter33.pdf')">Chapter 33</div>
+<div class="chapter-card" onclick="openChapter('chapter34.pdf')">Chapter 34</div>
+<div class="chapter-card" onclick="openChapter('chapter35.pdf')">Chapter 35</div>
+<div class="chapter-card" onclick="openChapter('chapter36.pdf')">Chapter 36</div>
+<div class="chapter-card" onclick="openChapter('chapter37.pdf')">Chapter 37</div>
+<div class="chapter-card" onclick="openChapter('chapter38.pdf')">Chapter 38</div>
+<div class="chapter-card" onclick="openChapter('chapter39.pdf')">Chapter 39</div>
+<div class="chapter-card" onclick="openChapter('chapter40.pdf')">Chapter 40</div>
+<div class="chapter-card" onclick="openChapter('chapter41.pdf')">Chapter 41</div>
+<div class="chapter-card" onclick="openChapter('chapter42.pdf')">Chapter 42</div>
+<div class="chapter-card" onclick="openChapter('chapter43.pdf')">Chapter 43</div>
+<div class="chapter-card" onclick="openChapter('chapter44.pdf')">Chapter 44</div>
+<div class="chapter-card" onclick="openChapter('chapter45.pdf')">Chapter 45</div>
+<div class="chapter-card" onclick="openChapter('chapter46.pdf')">Chapter 46</div>
+<div class="chapter-card" onclick="openChapter('chapter47.pdf')">Chapter 47</div>
+<div class="chapter-card" onclick="openChapter('chapter48.pdf')">Chapter 48</div>
+<div class="chapter-card" onclick="openChapter('chapter49.pdf')">Chapter 49</div>
+<div class="chapter-card" onclick="openChapter('chapter50.pdf')">Chapter 50</div>
+<div class="chapter-card" onclick="openChapter('chapter51.pdf')">Chapter 51</div>
+<div class="chapter-card" onclick="openChapter('chapter52.pdf')">Chapter 52</div>
+<div class="chapter-card" onclick="openChapter('chapter53.pdf')">Chapter 53</div>
+<div class="chapter-card" onclick="openChapter('chapter54.pdf')">Chapter 54</div>
+<div class="chapter-card" onclick="openChapter('chapter55.pdf')">Chapter 55</div>
+<div class="chapter-card" onclick="openChapter('chapter56.pdf')">Chapter 56</div>
+<div class="chapter-card" onclick="openChapter('chapter57.pdf')">Chapter 57</div>
+<div class="chapter-card" onclick="openChapter('chapter58.pdf')">Chapter 58</div>
+<div class="chapter-card" onclick="openChapter('chapter59.pdf')">Chapter 59</div>
+<div class="chapter-card" onclick="openChapter('chapter60.pdf')">Chapter 60</div>
+<div class="chapter-card" onclick="openChapter('chapter61.pdf')">Chapter 61</div>
+<div class="chapter-card" onclick="openChapter('chapter62.pdf')">Chapter 62</div>
+<div class="chapter-card" onclick="openChapter('chapter63.pdf')">Chapter 63</div>
+<div class="chapter-card" onclick="openChapter('chapter64.pdf')">Chapter 64</div>
+<div class="chapter-card" onclick="openChapter('chapter65.pdf')">Chapter 65</div>
+<div class="chapter-card" onclick="openChapter('chapter66.pdf')">Chapter 66</div>
+<div class="chapter-card" onclick="openChapter('chapter67.pdf')">Chapter 67</div>
+<div class="chapter-card" onclick="openChapter('chapter68.pdf')">Chapter 68</div>
+<div class="chapter-card" onclick="openChapter('chapter69.pdf')">Chapter 69</div>
+<div class="chapter-card" onclick="openChapter('chapter70.pdf')">Chapter 70</div>
+<div class="chapter-card" onclick="openChapter('chapter71.pdf')">Chapter 71</div>
+<div class="chapter-card" onclick="openChapter('chapter72.pdf')">Chapter 72</div>
+<div class="chapter-card" onclick="openChapter('chapter73.pdf')">Chapter 73</div>
+<div class="chapter-card" onclick="openChapter('chapter74.pdf')">Chapter 74</div>
+<div class="chapter-card" onclick="openChapter('chapter75.pdf')">Chapter 75</div>
+<div class="chapter-card" onclick="openChapter('chapter76.pdf')">Chapter 76</div>
+<div class="chapter-card" onclick="openChapter('chapter77.pdf')">Chapter 77</div>
+<div class="chapter-card" onclick="openChapter('chapter78.pdf')">Chapter 78</div>
+<div class="chapter-card" onclick="openChapter('chapter79.pdf')">Chapter 79</div>
+<div class="chapter-card" onclick="openChapter('chapter80.pdf')">Chapter 80</div>
+<div class="chapter-card" onclick="openChapter('chapter81.pdf')">Chapter 81</div>
+<div class="chapter-card" onclick="openChapter('chapter82.pdf')">Chapter 82</div>
+<div class="chapter-card" onclick="openChapter('chapter83.pdf')">Chapter 83</div>
+<div class="chapter-card" onclick="openChapter('chapter84.pdf')">Chapter 84</div>
+<div class="chapter-card" onclick="openChapter('chapter85.pdf')">Chapter 85</div>
+<div class="chapter-card" onclick="openChapter('chapter86.pdf')">Chapter 86</div>
+<div class="chapter-card" onclick="openChapter('chapter87.pdf')">Chapter 87</div>
+<div class="chapter-card" onclick="openChapter('chapter88.pdf')">Chapter 88</div>
+<div class="chapter-card" onclick="openChapter('chapter89.pdf')">Chapter 89</div>
+<div class="chapter-card" onclick="openChapter('chapter90.pdf')">Chapter 90</div>
+<div class="chapter-card" onclick="openChapter('chapter91.pdf')">Chapter 91</div>
+<div class="chapter-card" onclick="openChapter('chapter92.pdf')">Chapter 92</div>
+<div class="chapter-card" onclick="openChapter('chapter93.pdf')">Chapter 93</div>
+<div class="chapter-card" onclick="openChapter('chapter94.pdf')">Chapter 94</div>
+<div class="chapter-card" onclick="openChapter('chapter95.pdf')">Chapter 95</div>
+<div class="chapter-card" onclick="openChapter('chapter96.pdf')">Chapter 96</div>
+<div class="chapter-card" onclick="openChapter('chapter97.pdf')">Chapter 97</div>
+<div class="chapter-card" onclick="openChapter('chapter98.pdf')">Chapter 98</div>
+<div class="chapter-card" onclick="openChapter('chapter99.pdf')">Chapter 99</div>
+<div class="chapter-card" onclick="openChapter('chapter100.pdf')">Chapter 100</div>
+<div class="chapter-card" onclick="openChapter('chapter101.pdf')">Chapter 101</div>
+<div class="chapter-card" onclick="openChapter('chapter102.pdf')">Chapter 102</div>
+<div class="chapter-card" onclick="openChapter('chapter103.pdf')">Chapter 103</div>
+<div class="chapter-card" onclick="openChapter('chapter104.pdf')">Chapter 104</div>
+<div class="chapter-card" onclick="openChapter('chapter105.pdf')">Chapter 105</div>
+<div class="chapter-card" onclick="openChapter('chapter106.pdf')">Chapter 106</div>
+<div class="chapter-card" onclick="openChapter('chapter107.pdf')">Chapter 107</div>
+<div class="chapter-card" onclick="openChapter('chapter108.pdf')">Chapter 108</div>
+<div class="chapter-card" onclick="openChapter('chapter109.pdf')">Chapter 109</div>
+<div class="chapter-card" onclick="openChapter('chapter110.pdf')">Chapter 110</div>
+<div class="chapter-card" onclick="openChapter('chapter111.pdf')">Chapter 111</div>
+<div class="chapter-card" onclick="openChapter('chapter112.pdf')">Chapter 112</div>
+<div class="chapter-card" onclick="openChapter('chapter113.pdf')">Chapter 113</div>
+<div class="chapter-card" onclick="openChapter('chapter114.pdf')">Chapter 114</div>
+<div class="chapter-card" onclick="openChapter('chapter115.pdf')">Chapter 115</div>
+<div class="chapter-card" onclick="openChapter('chapter116.pdf')">Chapter 116</div>
+<div class="chapter-card" onclick="openChapter('chapter117.pdf')">Chapter 117</div>
+<div class="chapter-card" onclick="openChapter('chapter118.pdf')">Chapter 118</div>
+<div class="chapter-card" onclick="openChapter('chapter119.pdf')">Chapter 119</div>
+<div class="chapter-card" onclick="openChapter('chapter120.pdf')">Chapter 120</div>
+<div class="chapter-card" onclick="openChapter('chapter121.pdf')">Chapter 121</div>
+<div class="chapter-card" onclick="openChapter('chapter122.pdf')">Chapter 122</div>
+<div class="chapter-card" onclick="openChapter('chapter123.pdf')">Chapter 123</div>
+<div class="chapter-card" onclick="openChapter('chapter124.pdf')">Chapter 124</div>
+<div class="chapter-card" onclick="openChapter('chapter125.pdf')">Chapter 125</div>
+<div class="chapter-card" onclick="openChapter('chapter126.pdf')">Chapter 126</div>
+<div class="chapter-card" onclick="openChapter('chapter127.pdf')">Chapter 127</div>
+<div class="chapter-card" onclick="openChapter('chapter128.pdf')">Chapter 128</div>
+<div class="chapter-card" onclick="openChapter('chapter129.pdf')">Chapter 129</div>
+<div class="chapter-card" onclick="openChapter('chapter130.pdf')">Chapter 130</div>
+<div class="chapter-card" onclick="openChapter('chapter131.pdf')">Chapter 131</div>
+<div class="chapter-card" onclick="openChapter('chapter132.pdf')">Chapter 132</div>
+<div class="chapter-card" onclick="openChapter('chapter133.pdf')">Chapter 133</div>
+<div class="chapter-card" onclick="openChapter('chapter134.pdf')">Chapter 134</div>
+<div class="chapter-card" onclick="openChapter('chapter135.pdf')">Chapter 135</div>
+<div class="chapter-card" onclick="openChapter('chapter136.pdf')">Chapter 136</div>
+<div class="chapter-card" onclick="openChapter('chapter137.pdf')">Chapter 137</div>
+<div class="chapter-card" onclick="openChapter('chapter138.pdf')">Chapter 138</div>
+<div class="chapter-card" onclick="openChapter('chapter139.pdf')">Chapter 139</div>
+<div class="chapter-card" onclick="openChapter('chapter140.pdf')">Chapter 140</div>
+<div class="chapter-card" onclick="openChapter('chapter141.pdf')">Chapter 141</div>
+<div class="chapter-card" onclick="openChapter('chapter142.pdf')">Chapter 142</div>
+<div class="chapter-card" onclick="openChapter('chapter143.pdf')">Chapter 143</div>
+<div class="chapter-card" onclick="openChapter('chapter144.pdf')">Chapter 144</div>
+<div class="chapter-card" onclick="openChapter('chapter145.pdf')">Chapter 145</div>
+<div class="chapter-card" onclick="openChapter('chapter146.pdf')">Chapter 146</div>
+<div class="chapter-card" onclick="openChapter('chapter147.pdf')">Chapter 147</div>
+<div class="chapter-card" onclick="openChapter('chapter148.pdf')">Chapter 148</div>
+<div class="chapter-card" onclick="openChapter('chapter149.pdf')">Chapter 149</div>
+<div class="chapter-card" onclick="openChapter('chapter150.pdf')">Chapter 150</div>
+<div class="chapter-card" onclick="openChapter('chapter151.pdf')">Chapter 151</div>
+<div class="chapter-card" onclick="openChapter('chapter152.pdf')">Chapter 152</div>
+<div class="chapter-card" onclick="openChapter('chapter153.pdf')">Chapter 153</div>
+<div class="chapter-card" onclick="openChapter('chapter154.pdf')">Chapter 154</div>
+<div class="chapter-card" onclick="openChapter('chapter155.pdf')">Chapter 155</div>
+<div class="chapter-card" onclick="openChapter('chapter156.pdf')">Chapter 156</div>
+<div class="chapter-card" onclick="openChapter('chapter157.pdf')">Chapter 157</div>
+<div class="chapter-card" onclick="openChapter('chapter158.pdf')">Chapter 158</div>
+<div class="chapter-card" onclick="openChapter('chapter159.pdf')">Chapter 159</div>
+<div class="chapter-card" onclick="openChapter('chapter160.pdf')">Chapter 160</div>
+<div class="chapter-card" onclick="openChapter('chapter161.pdf')">Chapter 161</div>
+<div class="chapter-card" onclick="openChapter('chapter162.pdf')">Chapter 162</div>
+<div class="chapter-card" onclick="openChapter('chapter163.pdf')">Chapter 163</div>
+<div class="chapter-card" onclick="openChapter('chapter164.pdf')">Chapter 164</div>
+<div class="chapter-card" onclick="openChapter('chapter165.pdf')">Chapter 165</div>
+<div class="chapter-card" onclick="openChapter('chapter166.pdf')">Chapter 166</div>
+<div class="chapter-card" onclick="openChapter('chapter167.pdf')">Chapter 167</div>
+<div class="chapter-card" onclick="openChapter('chapter168.pdf')">Chapter 168</div>
+<div class="chapter-card" onclick="openChapter('chapter169.pdf')">Chapter 169</div>
+<div class="chapter-card" onclick="openChapter('chapter170.pdf')">Chapter 170</div>
+<div class="chapter-card" onclick="openChapter('chapter171.pdf')">Chapter 171</div>
+<div class="chapter-card" onclick="openChapter('chapter172.pdf')">Chapter 172</div>
+<div class="chapter-card" onclick="openChapter('chapter173.pdf')">Chapter 173</div>
+<div class="chapter-card" onclick="openChapter('chapter174.pdf')">Chapter 174</div>
+<div class="chapter-card" onclick="openChapter('chapter175.pdf')">Chapter 175</div>
+<div class="chapter-card" onclick="openChapter('chapter176.pdf')">Chapter 176</div>
+<div class="chapter-card" onclick="openChapter('chapter177.pdf')">Chapter 177</div>
+<div class="chapter-card" onclick="openChapter('chapter178.pdf')">Chapter 178</div>
+<div class="chapter-card" onclick="openChapter('chapter179.pdf')">Chapter 179</div>
+<div class="chapter-card" onclick="openChapter('chapter180.pdf')">Chapter 180</div>
+<div class="chapter-card" onclick="openChapter('chapter181.pdf')">Chapter 181</div>
+<div class="chapter-card" onclick="openChapter('chapter182.pdf')">Chapter 182</div>
+<div class="chapter-card" onclick="openChapter('chapter183.pdf')">Chapter 183</div>
+<div class="chapter-card" onclick="openChapter('chapter184.pdf')">Chapter 184</div>
+<div class="chapter-card" onclick="openChapter('chapter185.pdf')">Chapter 185</div>
+<div class="chapter-card" onclick="openChapter('chapter186.pdf')">Chapter 186</div>
+<div class="chapter-card" onclick="openChapter('chapter187.pdf')">Chapter 187</div>
+<div class="chapter-card" onclick="openChapter('chapter188.pdf')">Chapter 188</div>
+<div class="chapter-card" onclick="openChapter('chapter189.pdf')">Chapter 189</div>
+<div class="chapter-card" onclick="openChapter('chapter190.pdf')">Chapter 190</div>
+<div class="chapter-card" onclick="openChapter('chapter191.pdf')">Chapter 191</div>
+<div class="chapter-card" onclick="openChapter('chapter192.pdf')">Chapter 192</div>
+<div class="chapter-card" onclick="openChapter('chapter193.pdf')">Chapter 193</div>
+<div class="chapter-card" onclick="openChapter('chapter194.pdf')">Chapter 194</div>
+<div class="chapter-card" onclick="openChapter('chapter195.pdf')">Chapter 195</div>
+<div class="chapter-card" onclick="openChapter('chapter196.pdf')">Chapter 196</div>
+<div class="chapter-card" onclick="openChapter('chapter197.pdf')">Chapter 197</div>
+<div class="chapter-card" onclick="openChapter('chapter198.pdf')">Chapter 198</div>
+<div class="chapter-card" onclick="openChapter('chapter199.pdf')">Chapter 199</div>
+<div class="chapter-card" onclick="openChapter('chapter200.pdf')">Chapter 200</div>
+<div class="chapter-card" onclick="openChapter('chapter201.pdf')">Chapter 201</div>
+<div class="chapter-card" onclick="openChapter('chapter202.pdf')">Chapter 202</div>
+<div class="chapter-card" onclick="openChapter('chapter203.pdf')">Chapter 203</div>
+<div class="chapter-card" onclick="openChapter('chapter204.pdf')">Chapter 204</div>
+<div class="chapter-card" onclick="openChapter('chapter205.pdf')">Chapter 205</div>
+<div class="chapter-card" onclick="openChapter('chapter206.pdf')">Chapter 206</div>
+<div class="chapter-card" onclick="openChapter('chapter207.pdf')">Chapter 207</div>
+<div class="chapter-card" onclick="openChapter('chapter208.pdf')">Chapter 208</div>
+<div class="chapter-card" onclick="openChapter('chapter209.pdf')">Chapter 209</div>
+<div class="chapter-card" onclick="openChapter('chapter210.pdf')">Chapter 210</div>
+<div class="chapter-card" onclick="openChapter('chapter211.pdf')">Chapter 211</div>
+<div class="chapter-card" onclick="openChapter('chapter212.pdf')">Chapter 212</div>
+<div class="chapter-card" onclick="openChapter('chapter213.pdf')">Chapter 213</div>
+<div class="chapter-card" onclick="openChapter('chapter214.pdf')">Chapter 214</div>
+<div class="chapter-card" onclick="openChapter('chapter215.pdf')">Chapter 215</div>
+<div class="chapter-card" onclick="openChapter('chapter216.pdf')">Chapter 216</div>
+<div class="chapter-card" onclick="openChapter('chapter217.pdf')">Chapter 217</div>
+<div class="chapter-card" onclick="openChapter('chapter218.pdf')">Chapter 218</div>
+<div class="chapter-card" onclick="openChapter('chapter219.pdf')">Chapter 219</div>
+<div class="chapter-card" onclick="openChapter('chapter220.pdf')">Chapter 220</div>
+<div class="chapter-card" onclick="openChapter('chapter221.pdf')">Chapter 221</div>
+<div class="chapter-card" onclick="openChapter('chapter222.pdf')">Chapter 222</div>
+<div class="chapter-card" onclick="openChapter('chapter223.pdf')">Chapter 223</div>
+<div class="chapter-card" onclick="openChapter('chapter224.pdf')">Chapter 224</div>
+<div class="chapter-card" onclick="openChapter('chapter225.pdf')">Chapter 225</div>
+<div class="chapter-card" onclick="openChapter('chapter226.pdf')">Chapter 226</div>
+<div class="chapter-card" onclick="openChapter('chapter227.pdf')">Chapter 227</div>
+<div class="chapter-card" onclick="openChapter('chapter228.pdf')">Chapter 228</div>
+<div class="chapter-card" onclick="openChapter('chapter229.pdf')">Chapter 229</div>
+<div class="chapter-card" onclick="openChapter('chapter230.pdf')">Chapter 230</div>
+<div class="chapter-card" onclick="openChapter('chapter231.pdf')">Chapter 231</div>
+<div class="chapter-card" onclick="openChapter('chapter232.pdf')">Chapter 232</div>
+<div class="chapter-card" onclick="openChapter('chapter233.pdf')">Chapter 233</div>
+<div class="chapter-card" onclick="openChapter('chapter234.pdf')">Chapter 234</div>
+<div class="chapter-card" onclick="openChapter('chapter235.pdf')">Chapter 235</div>
+<div class="chapter-card" onclick="openChapter('chapter236.pdf')">Chapter 236</div>
+<div class="chapter-card" onclick="openChapter('chapter237.pdf')">Chapter 237</div>
+<div class="chapter-card" onclick="openChapter('chapter238.pdf')">Chapter 238</div>
+<div class="chapter-card" onclick="openChapter('chapter239.pdf')">Chapter 239</div>
+<div class="chapter-card" onclick="openChapter('chapter240.pdf')">Chapter 240</div>
+<div class="chapter-card" onclick="openChapter('chapter241.pdf')">Chapter 241</div>
+<div class="chapter-card" onclick="openChapter('chapter242.pdf')">Chapter 242</div>
+<div class="chapter-card" onclick="openChapter('chapter243.pdf')">Chapter 243</div>
+<div class="chapter-card" onclick="openChapter('chapter244.pdf')">Chapter 244</div>
+<div class="chapter-card" onclick="openChapter('chapter245.pdf')">Chapter 245</div>
+<div class="chapter-card" onclick="openChapter('chapter246.pdf')">Chapter 246</div>
+<div class="chapter-card" onclick="openChapter('chapter247.pdf')">Chapter 247</div>
+<div class="chapter-card" onclick="openChapter('chapter248.pdf')">Chapter 248</div>
+<div class="chapter-card" onclick="openChapter('chapter249.pdf')">Chapter 249</div>
+<div class="chapter-card" onclick="openChapter('chapter250.pdf')">Chapter 250</div>
+<div class="chapter-card" onclick="openChapter('chapter251.pdf')">Chapter 251</div>
+<div class="chapter-card" onclick="openChapter('chapter252.pdf')">Chapter 252</div>
+<div class="chapter-card" onclick="openChapter('chapter253.pdf')">Chapter 253</div>
+<div class="chapter-card" onclick="openChapter('chapter254.pdf')">Chapter 254</div>
+<div class="chapter-card" onclick="openChapter('chapter255.pdf')">Chapter 255</div>
+<div class="chapter-card" onclick="openChapter('chapter256.pdf')">Chapter 256</div>
+<div class="chapter-card" onclick="openChapter('chapter257.pdf')">Chapter 257</div>
+<div class="chapter-card" onclick="openChapter('chapter258.pdf')">Chapter 258</div>
+<div class="chapter-card" onclick="openChapter('chapter259.pdf')">Chapter 259</div>
+<div class="chapter-card" onclick="openChapter('chapter260.pdf')">Chapter 260</div>
+<div class="chapter-card" onclick="openChapter('chapter261.pdf')">Chapter 261</div>
+<div class="chapter-card" onclick="openChapter('chapter262.pdf')">Chapter 262</div>
+<div class="chapter-card" onclick="openChapter('chapter263.pdf')">Chapter 263</div>
+<div class="chapter-card" onclick="openChapter('chapter264.pdf')">Chapter 264</div>
+<div class="chapter-card" onclick="openChapter('chapter265.pdf')">Chapter 265</div>
+<div class="chapter-card" onclick="openChapter('chapter266.pdf')">Chapter 266</div>
+<div class="chapter-card" onclick="openChapter('chapter267.pdf')">Chapter 267</div>
+<div class="chapter-card" onclick="openChapter('chapter268.pdf')">Chapter 268</div>
+<div class="chapter-card" onclick="openChapter('chapter269.pdf')">Chapter 269</div>
+<div class="chapter-card" onclick="openChapter('chapter270.pdf')">Chapter 270</div>
+<div class="chapter-card" onclick="openChapter('chapter271.pdf')">Chapter 271</div>
+<div class="chapter-card" onclick="openChapter('chapter272.pdf')">Chapter 272</div>
+<div class="chapter-card" onclick="openChapter('chapter273.pdf')">Chapter 273</div>
+<div class="chapter-card" onclick="openChapter('chapter274.pdf')">Chapter 274</div>
+<div class="chapter-card" onclick="openChapter('chapter275.pdf')">Chapter 275</div>
+<div class="chapter-card" onclick="openChapter('chapter276.pdf')">Chapter 276</div>
+<div class="chapter-card" onclick="openChapter('chapter277.pdf')">Chapter 277</div>
+<div class="chapter-card" onclick="openChapter('chapter278.pdf')">Chapter 278</div>
+<div class="chapter-card" onclick="openChapter('chapter279.pdf')">Chapter 279</div>
+<div class="chapter-card" onclick="openChapter('chapter280.pdf')">Chapter 280</div>
+<div class="chapter-card" onclick="openChapter('chapter281.pdf')">Chapter 281</div>
+<div class="chapter-card" onclick="openChapter('chapter282.pdf')">Chapter 282</div>
+<div class="chapter-card" onclick="openChapter('chapter283.pdf')">Chapter 283</div>
+<div class="chapter-card" onclick="openChapter('chapter284.pdf')">Chapter 284</div>
+<div class="chapter-card" onclick="openChapter('chapter285.pdf')">Chapter 285</div>
+<div class="chapter-card" onclick="openChapter('chapter286.pdf')">Chapter 286</div>
+<div class="chapter-card" onclick="openChapter('chapter287.pdf')">Chapter 287</div>
+<div class="chapter-card" onclick="openChapter('chapter288.pdf')">Chapter 288</div>
+<div class="chapter-card" onclick="openChapter('chapter289.pdf')">Chapter 289</div>
+<div class="chapter-card" onclick="openChapter('chapter290.pdf')">Chapter 290</div>
+<div class="chapter-card" onclick="openChapter('chapter291.pdf')">Chapter 291</div>
+<div class="chapter-card" onclick="openChapter('chapter292.pdf')">Chapter 292</div>
+<div class="chapter-card" onclick="openChapter('chapter293.pdf')">Chapter 293</div>
+<div class="chapter-card" onclick="openChapter('chapter294.pdf')">Chapter 294</div>
+<div class="chapter-card" onclick="openChapter('chapter295.pdf')">Chapter 295</div>
+<div class="chapter-card" onclick="openChapter('chapter296.pdf')">Chapter 296</div>
+<div class="chapter-card" onclick="openChapter('chapter297.pdf')">Chapter 297</div>
+<div class="chapter-card" onclick="openChapter('chapter298.pdf')">Chapter 298</div>
+<div class="chapter-card" onclick="openChapter('chapter299.pdf')">Chapter 299</div>
+<div class="chapter-card" onclick="openChapter('chapter300.pdf')">Chapter 300</div>
+<div class="chapter-card" onclick="openChapter('chapter301.pdf')">Chapter 301</div>
+<div class="chapter-card" onclick="openChapter('chapter302.pdf')">Chapter 302</div>
+<div class="chapter-card" onclick="openChapter('chapter303.pdf')">Chapter 303</div>
+<div class="chapter-card" onclick="openChapter('chapter304.pdf')">Chapter 304</div>
+<div class="chapter-card" onclick="openChapter('chapter305.pdf')">Chapter 305</div>
+<div class="chapter-card" onclick="openChapter('chapter306.pdf')">Chapter 306</div>
+<div class="chapter-card" onclick="openChapter('chapter307.pdf')">Chapter 307</div>
+<div class="chapter-card" onclick="openChapter('chapter308.pdf')">Chapter 308</div>
+<div class="chapter-card" onclick="openChapter('chapter309.pdf')">Chapter 309</div>
+<div class="chapter-card" onclick="openChapter('chapter310.pdf')">Chapter 310</div>
+<div class="chapter-card" onclick="openChapter('chapter311.pdf')">Chapter 311</div>
+<div class="chapter-card" onclick="openChapter('chapter312.pdf')">Chapter 312</div>
+<div class="chapter-card" onclick="openChapter('chapter313.pdf')">Chapter 313</div>
+<div class="chapter-card" onclick="openChapter('chapter314.pdf')">Chapter 314</div>
+<div class="chapter-card" onclick="openChapter('chapter315.pdf')">Chapter 315</div>
+<div class="chapter-card" onclick="openChapter('chapter316.pdf')">Chapter 316</div>
+<div class="chapter-card" onclick="openChapter('chapter317.pdf')">Chapter 317</div>
+<div class="chapter-card" onclick="openChapter('chapter318.pdf')">Chapter 318</div>
+<div class="chapter-card" onclick="openChapter('chapter319.pdf')">Chapter 319</div>
+<div class="chapter-card" onclick="openChapter('chapter320.pdf')">Chapter 320</div>
+<div class="chapter-card" onclick="openChapter('chapter321.pdf')">Chapter 321</div>
+<div class="chapter-card" onclick="openChapter('chapter322.pdf')">Chapter 322</div>
+<div class="chapter-card" onclick="openChapter('chapter323.pdf')">Chapter 323</div>
+<div class="chapter-card" onclick="openChapter('chapter324.pdf')">Chapter 324</div>
+<div class="chapter-card" onclick="openChapter('chapter325.pdf')">Chapter 325</div>
+<div class="chapter-card" onclick="openChapter('chapter326.pdf')">Chapter 326</div>
+<div class="chapter-card" onclick="openChapter('chapter327.pdf')">Chapter 327</div>
+<div class="chapter-card" onclick="openChapter('chapter328.pdf')">Chapter 328</div>
+<div class="chapter-card" onclick="openChapter('chapter329.pdf')">Chapter 329</div>
+<div class="chapter-card" onclick="openChapter('chapter330.pdf')">Chapter 330</div>
+<div class="chapter-card" onclick="openChapter('chapter331.pdf')">Chapter 331</div>
+<div class="chapter-card" onclick="openChapter('chapter332.pdf')">Chapter 332</div>
+<div class="chapter-card" onclick="openChapter('chapter333.pdf')">Chapter 333</div>
+<div class="chapter-card" onclick="openChapter('chapter334.pdf')">Chapter 334</div>
+<div class="chapter-card" onclick="openChapter('chapter335.pdf')">Chapter 335</div>
+<div class="chapter-card" onclick="openChapter('chapter336.pdf')">Chapter 336</div>
+<div class="chapter-card" onclick="openChapter('chapter337.pdf')">Chapter 337</div>
+<div class="chapter-card" onclick="openChapter('chapter338.pdf')">Chapter 338</div>
+<div class="chapter-card" onclick="openChapter('chapter339.pdf')">Chapter 339</div>
+<div class="chapter-card" onclick="openChapter('chapter340.pdf')">Chapter 340</div>
+<div class="chapter-card" onclick="openChapter('chapter341.pdf')">Chapter 341</div>
+<div class="chapter-card" onclick="openChapter('chapter342.pdf')">Chapter 342</div>
+<div class="chapter-card" onclick="openChapter('chapter343.pdf')">Chapter 343</div>
+<div class="chapter-card" onclick="openChapter('chapter344.pdf')">Chapter 344</div>
+<div class="chapter-card" onclick="openChapter('chapter345.pdf')">Chapter 345</div>
+<div class="chapter-card" onclick="openChapter('chapter346.pdf')">Chapter 346</div>
+<div class="chapter-card" onclick="openChapter('chapter347.pdf')">Chapter 347</div>
+<div class="chapter-card" onclick="openChapter('chapter348.pdf')">Chapter 348</div>
+<div class="chapter-card" onclick="openChapter('chapter349.pdf')">Chapter 349</div>
+<div class="chapter-card" onclick="openChapter('chapter350.pdf')">Chapter 350</div>
+<div class="chapter-card" onclick="openChapter('chapter351.pdf')">Chapter 351</div>
+<div class="chapter-card" onclick="openChapter('chapter352.pdf')">Chapter 352</div>
+<div class="chapter-card" onclick="openChapter('chapter353.pdf')">Chapter 353</div>
+<div class="chapter-card" onclick="openChapter('chapter354.pdf')">Chapter 354</div>
+<div class="chapter-card" onclick="openChapter('chapter355.pdf')">Chapter 355</div>
+<div class="chapter-card" onclick="openChapter('chapter356.pdf')">Chapter 356</div>
+<div class="chapter-card" onclick="openChapter('chapter357.pdf')">Chapter 357</div>
+<div class="chapter-card" onclick="openChapter('chapter358.pdf')">Chapter 358</div>
+<div class="chapter-card" onclick="openChapter('chapter359.pdf')">Chapter 359</div>
+<div class="chapter-card" onclick="openChapter('chapter360.pdf')">Chapter 360</div>
+<div class="chapter-card" onclick="openChapter('chapter361.pdf')">Chapter 361</div>
+<div class="chapter-card" onclick="openChapter('chapter362.pdf')">Chapter 362</div>
+<div class="chapter-card" onclick="openChapter('chapter363.pdf')">Chapter 363</div>
+<div class="chapter-card" onclick="openChapter('chapter364.pdf')">Chapter 364</div>
+<div class="chapter-card" onclick="openChapter('chapter365.pdf')">Chapter 365</div>
+<div class="chapter-card" onclick="openChapter('chapter366.pdf')">Chapter 366</div>
+<div class="chapter-card" onclick="openChapter('chapter367.pdf')">Chapter 367</div>
+<div class="chapter-card" onclick="openChapter('chapter368.pdf')">Chapter 368</div>
+<div class="chapter-card" onclick="openChapter('chapter369.pdf')">Chapter 369</div>
+
+    <div id="pdf-container" style="display: none;">
+        <iframe id="pdf-iframe" width="100%" height="500" frameborder="0" scrolling="auto"></iframe>
+    </div>
+
+    <script>
+        function openChapter(pdfUrl) {
+            window.open(pdfUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
