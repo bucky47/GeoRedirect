@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cult Beauty Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+        .quiz-step {
+            display: none;
+        }
+        .quiz-step.active {
+            display: block;
+        }
+        button {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        img.logo {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://s1.thcdn.com/enterprise/assets/cbeauty-global-1d5b0de8-4bb3-43c9-868e-c9f4dde815fd-logo-default.svg" alt="Cult Beauty Logo" class="logo">
+        <h1>Win a $500 Cult Beauty Coupon!</h1>
+        <p>Answer the questions below for a chance to win a $500 coupon to shop at Cult Beauty.</p>
+
+        <div class="quiz-step active" id="step-1">
+            <h2>Question 1</h2>
+            <p>What is your favorite beauty product?</p>
+            <select>
+                <option value="skincare">Skincare</option>
+                <option value="makeup">Makeup</option>
+                <option value="haircare">Haircare</option>
+                <option value="fragrance">Fragrance</option>
+            </select>
+            <button onclick="nextStep(2)">Next</button>
+        </div>
+
+        <div class="quiz-step" id="step-2">
+            <h2>Question 2</h2>
+            <p>How often do you purchase beauty products?</p>
+            <select>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+            <button onclick="nextStep(3)">Next</button>
+        </div>
+
+        <div class="quiz-step" id="step-3">
+            <h2>Question 3</h2>
+            <p>What is your skin type?</p>
+            <select>
+                <option value="dry">Dry</option>
+                <option value="oily">Oily</option>
+                <option value="combination">Combination</option>
+                <option value="normal">Normal</option>
+            </select>
+            <button onclick="showOffer()">Submit</button>
+        </div>
+
+        <div class="quiz-step" id="offer" >
+            <h2>Congratulations!</h2>
+            <p>Click the button below to claim your $500 coupon by entering your shipping details in the next step.</p>
+            <button onclick="redirectToOffer()">Click Here to Claim Your Gift Card</button>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(step) {
+            document.querySelectorAll('.quiz-step').forEach(function(stepEl) {
+                stepEl.classList.remove('active');
+            });
+            document.getElementById('step-' + step).classList.add('active');
+        }
+
+        function showOffer() {
+            document.querySelectorAll('.quiz-step').forEach(function(stepEl) {
+                stepEl.classList.remove('active');
+            });
+            document.getElementById('offer').classList.add('active');
+        }
+
+        function redirectToOffer() {
+            window.location.href = 'https://thedantonboy.com/click'; // Replace with the URL of the page where the user will enter their details
+        }
+    </script>
+</body>
+</html>
