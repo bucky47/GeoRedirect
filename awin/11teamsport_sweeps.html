@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11teamsports Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e9ecef;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+        .quiz-step {
+            display: none;
+        }
+        .quiz-step.active {
+            display: block;
+        }
+        button {
+            background: #e30613;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        img.logo {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRl6cSHOA_ZamFe-yYXb4avN3HSg8O_yKarg&s" alt="11teamsports Logo" class="logo">
+        <h1>Gewinne einen 500 € 11teamsports Gutschein!</h1>
+        <p>Beantworte die Fragen unten, um die Chance auf einen 500 € Gutschein zu erhalten.</p>
+
+        <div class="quiz-step active" id="step-1">
+            <h2>Frage 1</h2>
+            <p>Was ist dein Lieblings-Fußballtrikot?</p>
+            <select>
+                <option value="home">Heimtrikot</option>
+                <option value="away">Auswärtstrikot</option>
+                <option value="third">Drittes Trikot</option>
+                <option value="special">Spezialtrikot</option>
+            </select>
+            <button onclick="nextStep(2)">Weiter</button>
+        </div>
+
+        <div class="quiz-step" id="step-2">
+            <h2>Frage 2</h2>
+            <p>Wie oft kaufst du Fußballausrüstung?</p>
+            <select>
+                <option value="weekly">Wöchentlich</option>
+                <option value="monthly">Monatlich</option>
+                <option value="quarterly">Vierteljährlich</option>
+                <option value="yearly">Jährlich</option>
+            </select>
+            <button onclick="nextStep(3)">Weiter</button>
+        </div>
+
+        <div class="quiz-step" id="step-3">
+            <h2>Frage 3</h2>
+            <p>Welche Art von Fußballschuhen bevorzugst du?</p>
+            <select>
+                <option value="firm-ground">Hartplatz</option>
+                <option value="soft-ground">Weichplatz</option>
+                <option value="artificial-grass">Kunstrasen</option>
+                <option value="indoor">Halle</option>
+            </select>
+            <button onclick="showOffer()">Absenden</button>
+        </div>
+
+        <div class="quiz-step" id="offer">
+            <h2>Herzlichen Glückwunsch!</h2>
+            <p>Klicke auf den Button unten, um deinen 500 € Gutschein zu beanspruchen, indem du im nächsten Schritt deine Versanddaten eingibst.</p>
+            <button onclick="redirectToOffer()">Hier klicken, um den Gutschein zu erhalten</button>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(step) {
+            document.querySelectorAll('.quiz-step').forEach(function(stepEl) {
+                stepEl.classList.remove('active');
+            });
+            document.getElementById('step-' + step).classList.add('active');
+        }
+
+        function showOffer() {
+            document.querySelectorAll('.quiz-step').forEach(function(stepEl) {
+                stepEl.classList.remove('active');
+            });
+            document.getElementById('offer').classList.add('active');
+        }
+
+        function redirectToOffer() {
+            window.location.href = 'https://thedantonboy.com/click'; // Replace with the URL of the page where the user will enter their details
+        }
+    </script>
+</body>
+</html>
